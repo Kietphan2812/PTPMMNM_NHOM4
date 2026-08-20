@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liên hệ — Vườn Nhà</title>
+<link rel="stylesheet" href="lienhe.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="trangchu.html" class="logo"><span class="logo-mark">🍊</span> Vườn Nhà</a>
+    <nav class="nav-links">
+      <a href="trangchu.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="sanpham.html">Sản phẩm</a>
+      <a href="lienhe.html" class="active">Liên hệ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="dangnhap.html" class="btn btn-ghost">Đăng nhập</a>
+      <a href="giohang.html" class="cart-icon" title="Xem giỏ hàng">🧺<span class="count">3</span></a>
+      <a href="sanpham.html" class="btn btn-primary">Mua ngay</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-head">
+  <span class="eyebrow">Liên hệ với chúng tôi</span>
+  <h1>Chúng tôi luôn sẵn sàng lắng nghe</h1>
+  <p>Có câu hỏi về đơn hàng, hợp tác nhà vườn hay góp ý sản phẩm? Gửi tin nhắn hoặc liên hệ trực tiếp theo thông tin bên dưới.</p>
+</section>
+
+<section class="contact-wrap">
+  <div class="contact-info">
+    <div class="info-card">
+      <div class="info-icon">📍</div>
+      <div>
+        <h3>Địa chỉ</h3>
+        <p>Kho trung tâm Vườn Nhà, 12 Nguyễn Chí Thanh, Buôn Ma Thuột, Đắk Lắk</p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">📞</div>
+      <div>
+        <h3>Hotline</h3>
+        <p>098 765 4321 — hỗ trợ 7h–21h tất cả các ngày trong tuần</p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">✉️</div>
+      <div>
+        <h3>Email</h3>
+        <p>hello@vuonnha.vn — phản hồi trong vòng 24 giờ làm việc</p>
+      </div>
+    </div>
+    <div class="hours-card">
+      <h3>Giờ làm việc</h3>
+      <div class="hours-row"><span>Thứ 2 – Thứ 6</span><span>7:00 – 21:00</span></div>
+      <div class="hours-row"><span>Thứ 7 – Chủ nhật</span><span>8:00 – 20:00</span></div>
+      <div class="hours-row"><span>Ngày lễ</span><span>8:00 – 17:00</span></div>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <h2>Gửi tin nhắn cho Vườn Nhà</h2>
+    <p>Điền thông tin bên dưới, đội ngũ chăm sóc khách hàng sẽ liên hệ lại sớm nhất.</p>
+    <form onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã gửi tin nhắn! Vườn Nhà sẽ phản hồi trong vòng 24 giờ.');">
+      <div class="form-grid">
+        <div class="field"><label for="ten">Họ và tên</label><input type="text" id="ten" placeholder="Nguyễn Văn A" required></div>
+        <div class="field"><label for="sdt">Số điện thoại</label><input type="tel" id="sdt" placeholder="09xx xxx xxx" required></div>
+        <div class="field full"><label for="email">Email</label><input type="email" id="email" placeholder="ban@email.com" required></div>
+        <div class="field full"><label for="chude">Chủ đề</label>
+          <select id="chude">
+            <option>Hỏi về đơn hàng</option>
+            <option>Hợp tác cùng nhà vườn</option>
+            <option>Góp ý sản phẩm</option>
+            <option>Khác</option>
+          </select>
+        </div>
+        <div class="field full"><label for="noidung">Nội dung</label><textarea id="noidung" placeholder="Nhập nội dung bạn muốn gửi..." required></textarea></div>
+      </div>
+      <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+    </form>
+  </div>
+</section>
+
+<section class="map-strip">
+  <div class="map-inner">
+    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop" alt="Bản đồ khu vực Buôn Ma Thuột, Đắk Lắk">
+  </div>
+</section>
+
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-head">
+      <span class="eyebrow">Câu hỏi thường gặp</span>
+      <h2>Giải đáp nhanh trước khi bạn liên hệ</h2>
+    </div>
+    <div class="faq-item">
+      <h3>Vườn Nhà giao hàng ở những khu vực nào?</h3>
+      <p>Hiện tại giao trong ngày tại Buôn Ma Thuột, TP. Hồ Chí Minh, Hà Nội và Đà Nẵng. Các tỉnh khác giao trong 1–2 ngày qua đối tác vận chuyển.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Tôi có thể đổi trả nếu trái cây không như mong đợi?</h3>
+      <p>Có. Vườn Nhà đổi trả miễn phí trong vòng 24 giờ nếu trái cây bị dập, hư hỏng hoặc không đúng mô tả sản phẩm.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Làm sao để trở thành nhà vườn liên kết?</h3>
+      <p>Gửi thông tin qua form liên hệ ở mục "Hợp tác cùng nhà vườn", đội ngũ thu mua sẽ khảo sát và phản hồi trong vòng 5 ngày làm việc.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="trangchu.html" class="logo"><span class="logo-mark">🍊</span> Vườn Nhà</a>
+      <p>Trái cây tươi từ nhà vườn Việt Nam, hái theo mùa, giao tận nhà mỗi ngày.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Điều hướng</h4>
+      <a href="trangchu.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="sanpham.html">Sản phẩm</a>
+      <a href="lienhe.html">Liên hệ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Tài khoản &amp; Đơn</h4>
+      <a href="dangnhap.html">Đăng nhập</a>
+      <a href="dangky.html">Đăng ký</a>
+      <a href="giohang.html">Giỏ hàng</a>
+      <a href="taikhoan.html">Đơn hàng của tôi</a>
+    </div>
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <li>098 765 4321</li>
+      <li>hello@vuonnha.vn</li>
+      <li>Buôn Ma Thuột, Đắk Lắk</li>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Vườn Nhà. Trái cây sạch mỗi ngày.</span>
+    <span>Thiết kế bởi Vườn Nhà Studio</span>
+  </div>
+</footer>
+
+</body>
+</html>

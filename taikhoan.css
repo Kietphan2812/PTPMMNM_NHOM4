@@ -1,0 +1,272 @@
+/* ============================================
+   VƯỜN NHÀ — TRANG TÀI KHOẢN / ĐƠN HÀNG
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+:root{
+  --green-dark:#1f4d2c;
+  --green:#4a7c59;
+  --green-pale:#e5efe1;
+  --mango:#e8792c;
+  --sun:#f4c14e;
+  --paper:#faf3e6;
+  --plum:#6b2d3c;
+  --ink:#26251f;
+  --line:#d8cdb4;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Work Sans', sans-serif;
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+img{max-width:100%;display:block;}
+
+.eyebrow{font-family:'JetBrains Mono', monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mango);font-weight:700;}
+
+/* ---------- HEADER ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:2px solid var(--ink);}
+.nav-wrap{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 28px;}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Fraunces', serif;font-weight:700;font-size:1.5rem;color:var(--green-dark);}
+.logo-mark{width:36px;height:36px;border-radius:50%;background:var(--sun);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.nav-links{display:flex;gap:34px;font-weight:600;font-size:.95rem;}
+.nav-links a{position:relative;padding:4px 2px;}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;background:var(--mango);transition:width .25s ease;}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-links a.active{color:var(--mango);}
+.nav-cta{display:flex;gap:12px;align-items:center;}
+.btn{display:inline-block;font-family:'Work Sans',sans-serif;font-weight:700;font-size:.9rem;padding:11px 22px;border-radius:999px;border:2px solid var(--ink);cursor:pointer;transition:transform .18s ease, box-shadow .18s ease;}
+.btn-primary{background:var(--mango);color:#fff;box-shadow:3px 3px 0 var(--ink);}
+.btn-primary:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
+.btn-ghost{background:transparent;color:var(--ink);}
+.btn-ghost:hover{background:var(--green-pale);}
+.cart-icon{
+  position:relative;
+  width:42px;height:42px;
+  border:2px solid var(--ink);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;
+  background:#fff;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.cart-icon:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--ink);}
+.cart-icon .count{
+  position:absolute;top:-6px;right:-6px;
+  background:var(--mango);
+  color:#fff;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.65rem;
+  font-weight:700;
+  width:20px;height:20px;
+  border-radius:50%;
+  border:2px solid var(--paper);
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ---------- ACCOUNT HEAD ---------- */
+.account-head{
+  background:var(--green-dark);
+  color:var(--paper);
+  padding:44px 28px;
+}
+.account-head-inner{
+  max-width:1180px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.avatar{
+  width:64px;height:64px;
+  border-radius:50%;
+  border:3px solid var(--sun);
+  overflow:hidden;
+  flex-shrink:0;
+}
+.avatar img{width:100%;height:100%;object-fit:cover;}
+.account-head h1{font-family:'Fraunces', serif;font-weight:600;font-size:1.6rem;}
+.account-head span{
+  display:block;
+  margin-top:4px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.8rem;
+  color:#cfe0cf;
+}
+
+/* ---------- LAYOUT ---------- */
+.account-wrap{
+  max-width:1180px;
+  margin:0 auto;
+  padding:40px 28px 80px;
+  display:grid;
+  grid-template-columns:.7fr 2fr;
+  gap:40px;
+  align-items:start;
+}
+
+.account-nav{
+  background:#fff;
+  border:2px solid var(--ink);
+  border-radius:8px;
+  overflow:hidden;
+  position:sticky;
+  top:96px;
+}
+.account-nav a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:16px 20px;
+  font-size:.9rem;
+  font-weight:600;
+  border-bottom:1px solid var(--line);
+}
+.account-nav a:last-child{border-bottom:none;}
+.account-nav a.active{background:var(--green-pale);color:var(--green-dark);}
+.account-nav a:hover{background:var(--green-pale);}
+
+.account-main h2{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:1.6rem;
+  color:var(--green-dark);
+}
+.account-main > p{margin-top:8px;color:#5c5a4e;font-size:.92rem;}
+
+/* ---------- STAT CARDS ---------- */
+.stat-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:26px;
+}
+.stat-card{
+  background:#fff;
+  border:2px solid var(--ink);
+  border-radius:8px;
+  padding:20px;
+}
+.stat-card strong{
+  display:block;
+  font-family:'Fraunces', serif;
+  font-size:1.9rem;
+  color:var(--plum);
+}
+.stat-card span{
+  display:block;
+  margin-top:4px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:var(--green);
+}
+
+/* ---------- ORDERS TABLE ---------- */
+.orders-table{
+  margin-top:32px;
+  background:#fff;
+  border:2px solid var(--ink);
+  border-radius:8px;
+  overflow:hidden;
+}
+.order-row{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr auto auto;
+  gap:16px;
+  align-items:center;
+  padding:18px 22px;
+  border-bottom:1px dashed var(--line);
+}
+.order-row:last-child{border-bottom:none;}
+.order-row.head{
+  background:var(--green-pale);
+  font-family:'JetBrains Mono', monospace;
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:var(--green-dark);
+  font-weight:700;
+}
+.order-id{font-family:'JetBrains Mono', monospace;font-weight:700;color:var(--green-dark);}
+.order-date{font-size:.86rem;color:#6b6a5d;}
+.order-total{font-family:'JetBrains Mono', monospace;font-weight:700;color:var(--plum);}
+.order-status{
+  display:inline-block;
+  padding:5px 12px;
+  border-radius:999px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.68rem;
+  font-weight:700;
+  text-transform:uppercase;
+  width:fit-content;
+}
+.status-done{background:var(--green-pale);color:var(--green-dark);}
+.status-shipping{background:#fdeccb;color:#8a5a10;}
+.status-cancel{background:#f4dde1;color:var(--plum);}
+.order-link{
+  font-family:'JetBrains Mono', monospace;
+  font-size:.76rem;
+  color:var(--mango);
+  font-weight:700;
+}
+.order-link:hover{text-decoration:underline;}
+
+/* ---------- PROFILE FORM (dùng khi cần, ẩn mặc định trong demo) ---------- */
+.profile-form{
+  margin-top:26px;
+  background:#fff;
+  border:2px solid var(--ink);
+  border-radius:8px;
+  padding:28px;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.form-grid .full{grid-column:1 / -1;}
+.field label{
+  display:block;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:var(--green-dark);
+  margin-bottom:7px;
+  font-weight:700;
+}
+.field input{
+  width:100%;
+  padding:12px 14px;
+  border:2px solid var(--ink);
+  border-radius:8px;
+  font-family:'Work Sans', sans-serif;
+  font-size:.9rem;
+}
+.profile-form .btn-primary{margin-top:20px;}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--green-dark);color:var(--paper);padding:40px 28px 24px;text-align:center;}
+footer .logo{color:var(--paper);justify-content:center;}
+footer p{margin-top:10px;color:#cfe0cf;font-size:.85rem;}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:900px){
+  .account-wrap{grid-template-columns:1fr;}
+  .account-nav{position:static;display:flex;overflow-x:auto;}
+  .account-nav a{border-bottom:none;border-right:1px solid var(--line);white-space:nowrap;}
+  .stat-row{grid-template-columns:1fr;}
+  .order-row{grid-template-columns:1fr;gap:6px;}
+  .order-row.head{display:none;}
+}
+@media (max-width:640px){
+  .nav-links{display:none;}
+  .form-grid{grid-template-columns:1fr;}
+}

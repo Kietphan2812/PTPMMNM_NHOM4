@@ -1,0 +1,227 @@
+/* ============================================
+   VƯỜN NHÀ — TRANG THANH TOÁN
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+:root{
+  --green-dark:#1f4d2c;
+  --green:#4a7c59;
+  --green-pale:#e5efe1;
+  --mango:#e8792c;
+  --sun:#f4c14e;
+  --paper:#faf3e6;
+  --plum:#6b2d3c;
+  --ink:#26251f;
+  --line:#d8cdb4;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Work Sans', sans-serif;
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+.eyebrow{font-family:'JetBrains Mono', monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mango);font-weight:700;}
+
+/* ---------- HEADER ---------- */
+.site-header{background:var(--paper);border-bottom:2px solid var(--ink);}
+.nav-wrap{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 28px;}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Fraunces', serif;font-weight:700;font-size:1.5rem;color:var(--green-dark);}
+.logo-mark{width:36px;height:36px;border-radius:50%;background:var(--sun);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.secure-note{
+  font-family:'JetBrains Mono', monospace;
+  font-size:.78rem;
+  color:var(--green-dark);
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* ---------- STEPS ---------- */
+.steps{
+  max-width:1180px;
+  margin:0 auto;
+  padding:32px 28px 0;
+  display:flex;
+  justify-content:center;
+  gap:0;
+}
+.step{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.8rem;
+  color:#9c9a8b;
+  padding:0 22px;
+  position:relative;
+}
+.step .dot{
+  width:26px;height:26px;
+  border-radius:50%;
+  border:2px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;
+  font-size:.75rem;
+  background:#fff;
+}
+.step.done .dot{background:var(--green-dark);border-color:var(--green-dark);color:#fff;}
+.step.active .dot{background:var(--mango);border-color:var(--ink);color:#fff;}
+.step.active{color:var(--ink);font-weight:700;}
+.step:not(:last-child)::after{
+  content:"";
+  width:60px;
+  height:1px;
+  background:var(--line);
+  margin-left:14px;
+}
+
+/* ---------- LAYOUT ---------- */
+.checkout-wrap{
+  max-width:1180px;
+  margin:0 auto;
+  padding:36px 28px 80px;
+  display:grid;
+  grid-template-columns:1.6fr 1fr;
+  gap:44px;
+  align-items:start;
+}
+
+.checkout-form h1{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:1.9rem;
+  color:var(--green-dark);
+}
+
+.form-block{
+  margin-top:32px;
+  background:#fff;
+  border:2px solid var(--ink);
+  border-radius:8px;
+  padding:26px;
+}
+.form-block h2{
+  font-family:'Fraunces', serif;
+  font-size:1.2rem;
+  color:var(--green-dark);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.form-block h2 .num{
+  width:28px;height:28px;
+  border-radius:50%;
+  background:var(--sun);
+  border:2px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.8rem;
+  font-weight:700;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:20px;
+}
+.form-grid .full{grid-column:1 / -1;}
+.field label{
+  display:block;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:var(--green-dark);
+  margin-bottom:7px;
+  font-weight:700;
+}
+.field input,.field select,.field textarea{
+  width:100%;
+  padding:12px 14px;
+  border:2px solid var(--ink);
+  border-radius:8px;
+  font-family:'Work Sans', sans-serif;
+  font-size:.9rem;
+  background:#fff;
+}
+.field textarea{resize:vertical;min-height:70px;}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;
+  border-color:var(--mango);
+  box-shadow:0 0 0 3px rgba(232,121,44,.18);
+}
+
+.pay-options{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.pay-option{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border:2px solid var(--ink);
+  border-radius:8px;
+  padding:14px 16px;
+  cursor:pointer;
+}
+.pay-option.selected{border-color:var(--mango);background:var(--green-pale);}
+.pay-option input{accent-color:var(--mango);width:18px;height:18px;}
+.pay-option .pay-label strong{display:block;font-size:.92rem;}
+.pay-option .pay-label span{font-size:.78rem;color:#7a7869;}
+
+/* ---------- SUMMARY ---------- */
+.summary{
+  background:var(--green-pale);
+  border:2px solid var(--ink);
+  border-radius:8px;
+  padding:28px;
+  position:sticky;
+  top:28px;
+}
+.summary h2{font-family:'Fraunces', serif;font-size:1.3rem;color:var(--green-dark);}
+.summary-item{
+  display:flex;
+  justify-content:space-between;
+  margin-top:14px;
+  font-size:.88rem;
+  color:#4b4a41;
+}
+.summary-item .name{max-width:70%;}
+.summary-item .qty{color:#9c9a8b;font-family:'JetBrains Mono', monospace;font-size:.76rem;}
+.summary-row{
+  display:flex;justify-content:space-between;
+  margin-top:14px;font-size:.9rem;color:#4b4a41;
+  padding-top:14px;border-top:1px dashed var(--ink);
+}
+.summary-row.total{
+  margin-top:16px;padding-top:16px;border-top:1px dashed var(--ink);
+  font-weight:700;font-size:1.1rem;color:var(--plum);
+  font-family:'JetBrains Mono', monospace;
+}
+.btn{display:inline-block;font-family:'Work Sans',sans-serif;font-weight:700;font-size:.9rem;padding:11px 22px;border-radius:999px;border:2px solid var(--ink);cursor:pointer;}
+.btn-primary{background:var(--mango);color:#fff;box-shadow:3px 3px 0 var(--ink);transition:transform .18s ease, box-shadow .18s ease;}
+.btn-primary:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
+.summary .btn-primary{width:100%;margin-top:22px;text-align:center;padding:14px 0;}
+.summary-note{margin-top:14px;text-align:center;font-size:.78rem;color:#7a7869;}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--green-dark);color:var(--paper);padding:40px 28px 24px;text-align:center;}
+footer .logo{color:var(--paper);justify-content:center;}
+footer p{margin-top:10px;color:#cfe0cf;font-size:.85rem;}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:900px){
+  .checkout-wrap{grid-template-columns:1fr;}
+  .summary{position:static;}
+  .form-grid{grid-template-columns:1fr;}
+  .steps{gap:0;flex-wrap:wrap;}
+}
