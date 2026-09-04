@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xoài cát Hòa Lộc — Vườn Nhà</title>
+<link rel="stylesheet" href="chitietsanpham.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="trangchu.html" class="logo"><span class="logo-mark">🍊</span> Vườn Nhà</a>
+    <nav class="nav-links">
+      <a href="trangchu.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="sanpham.html">Sản phẩm</a>
+      <a href="lienhe.html">Liên hệ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="dangnhap.html" class="btn btn-ghost">Đăng nhập</a>
+      <a href="giohang.html" class="cart-icon" title="Xem giỏ hàng">🧺<span class="count">3</span></a>
+      <a href="sanpham.html" class="btn btn-primary">Mua ngay</a>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="trangchu.html">Trang chủ</a><span class="sep">/</span>
+  <a href="sanpham.html">Sản phẩm</a><span class="sep">/</span>
+  <span class="current">Xoài cát Hòa Lộc</span>
+</div>
+
+<section class="detail">
+  <div class="gallery">
+    <div class="gallery-main">
+      <img id="main-img" src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=900&auto=format&fit=crop" alt="Xoài cát Hòa Lộc chín vàng">
+    </div>
+    <div class="gallery-thumbs">
+      <div onclick="document.getElementById('main-img').src=this.querySelector('img').src;"><img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=300&auto=format&fit=crop" alt="Xoài cát Hòa Lộc góc 1"></div>
+      <div onclick="document.getElementById('main-img').src=this.querySelector('img').src;"><img src="https://images.unsplash.com/photo-1591073113125-8ef4c00e5326?q=80&w=300&auto=format&fit=crop" alt="Xoài cát Hòa Lộc góc 2"></div>
+      <div onclick="document.getElementById('main-img').src=this.querySelector('img').src;"><img src="https://images.unsplash.com/photo-1553279768-865429fa0078?q=80&w=300&auto=format&fit=crop" alt="Xoài cát Hòa Lộc cắt lát"></div>
+      <div onclick="document.getElementById('main-img').src=this.querySelector('img').src;"><img src="https://images.unsplash.com/photo-1605027990121-cbae9e0642df?q=80&w=300&auto=format&fit=crop" alt="Thùng xoài đóng gói"></div>
+    </div>
+  </div>
+
+  <div class="info">
+    <div class="info-top">
+      <div>
+        <span class="eyebrow">Nhiệt đới · Đang vào mùa</span>
+        <h1>Xoài cát Hòa Lộc</h1>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span>4.9/5 · 328 đánh giá</span>
+        </div>
+      </div>
+      <div class="stamp-mini">Hái<br>trong<br>24h</div>
+    </div>
+
+    <div class="info-price">
+      <span class="price-now">89.000₫</span>
+      <span class="price-old">105.000₫</span>
+      <span class="price-tag">Tiết kiệm 15%</span>
+    </div>
+
+    <p class="desc">Xoài cát Hòa Lộc thu hoạch từ vườn tại Cái Bè, Tiền Giang — nổi tiếng với thịt vàng óng, dày cơm, ít xơ và vị ngọt thanh đặc trưng. Mỗi thùng 3kg được chọn lọc thủ công, đóng gói cùng lớp lót giữ ẩm để giữ trọn độ tươi khi vận chuyển.</p>
+
+    <div class="origin-box">
+      <div><span>Nguồn gốc</span><strong>Cái Bè, Tiền Giang</strong></div>
+      <div><span>Ngày hái</span><strong>Trong vòng 24 giờ</strong></div>
+      <div><span>Trọng lượng</span><strong>Thùng 3kg (8–10 trái)</strong></div>
+      <div><span>Bảo quản</span><strong>Nơi thoáng mát, 3–5 ngày</strong></div>
+    </div>
+
+    <div class="qty-row">
+      <div class="qty-control">
+        <button onclick="let q=document.getElementById('p-qty'); if(parseInt(q.innerText)>1) q.innerText=parseInt(q.innerText)-1;">−</button>
+        <span id="p-qty">1</span>
+        <button onclick="let q=document.getElementById('p-qty'); q.innerText=parseInt(q.innerText)+1;">+</button>
+      </div>
+      <a href="giohang.html" class="btn btn-primary">Thêm vào giỏ hàng</a>
+      <a href="#" class="btn btn-ghost" onclick="event.preventDefault(); alert('Đã thêm Xoài cát Hòa Lộc vào danh sách yêu thích!');">♡ Yêu thích</a>
+    </div>
+
+    <div class="info-tabs">
+      <div class="tab-labels">
+        <div class="tab-label active" onclick="showTab(0, this)">Mô tả</div>
+        <div class="tab-label" onclick="showTab(1, this)">Dinh dưỡng</div>
+        <div class="tab-label" onclick="showTab(2, this)">Vận chuyển</div>
+      </div>
+      <div class="tab-panel" id="tab-content">
+        <ul>
+          <li>Giống xoài cát đặc sản vùng Đồng bằng sông Cửu Long, trồng theo hướng VietGAP.</li>
+          <li>Trái được hái khi vừa chớm chín, tiếp tục chín tự nhiên trong 1–2 ngày khi tới tay khách.</li>
+          <li>Không sử dụng thuốc thúc chín hay chất bảo quản sau thu hoạch.</li>
+          <li>Phù hợp ăn trực tiếp, làm sinh tố, gỏi xoài hoặc chè xoài.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const tabData = [
+  `<ul>
+    <li>Giống xoài cát đặc sản vùng Đồng bằng sông Cửu Long, trồng theo hướng VietGAP.</li>
+    <li>Trái được hái khi vừa chớm chín, tiếp tục chín tự nhiên trong 1–2 ngày khi tới tay khách.</li>
+    <li>Không sử dụng thuốc thúc chín hay chất bảo quản sau thu hoạch.</li>
+    <li>Phù hợp ăn trực tiếp, làm sinh tố, gỏi xoài hoặc chè xoài.</li>
+  </ul>`,
+  `<ul>
+    <li>Giàu Vitamin C, Vitamin A giúp tăng cường hệ miễn dịch và sáng mắt.</li>
+    <li>Chứa nhiều chất xơ tự nhiên hỗ trợ hệ tiêu hóa hoạt động khỏe mạnh.</li>
+    <li>Năng lượng: ~60 kcal/100g thịt xoài chín tươi.</li>
+    <li>Cung cấp chất chống oxy hóa Polyphenol và khoáng chất Kali, Magie.</li>
+  </ul>`,
+  `<ul>
+    <li>Giao nhanh trong 24 giờ kể từ thời điểm hái tại vườn.</li>
+    <li>Đóng gói chống sốc và lót đệm rơm/xốp mềm chuyên dụng bảo vệ từng quả.</li>
+    <li>Miễn phí vận chuyển cho đơn hàng từ 200.000₫.</li>
+    <li>Cam kết 1 đổi 1 miễn phí trong 24h nếu trái cây bị dập nát hoặc hư hỏng.</li>
+  </ul>`
+];
+function showTab(idx, el) {
+  document.querySelectorAll('.tab-label').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-content').innerHTML = tabData[idx];
+}
+</script>
+
+<section class="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-head">
+      <div>
+        <span class="eyebrow">Khách hàng nói gì</span>
+        <h2>328 đánh giá cho Xoài cát Hòa Lộc</h2>
+      </div>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Xoài ngọt, thịt dày, không bị xơ. Giao hàng đúng hẹn, đóng gói cẩn thận không dập trái nào.</p>
+        <div class="who">Chị Hương — TP. Hồ Chí Minh</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Mua lần thứ ba rồi, chất lượng ổn định mỗi lần đặt. Trái đều nhau, chín vừa ăn ngay khi nhận.</p>
+        <div class="who">Anh Dũng — Hà Nội</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p>Xoài ngon, giá hợp lý so với ngoài chợ. Chỉ mong đóng gói thêm lớp chống sốc khi vận chuyển xa.</p>
+        <div class="who">Chị Mai — Đà Nẵng</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related">
+  <div class="related-inner">
+    <div class="related-head">
+      <span class="eyebrow">Có thể bạn cũng thích</span>
+      <h2>Trái cây liên quan</h2>
+    </div>
+    <div class="related-grid">
+      <a class="mini-card" href="chitietsanpham.html">
+        <div class="mini-thumb"><img src="https://images.unsplash.com/photo-1629828874514-d71c15ee5150?q=80&w=400&auto=format&fit=crop" alt="Sầu riêng Ri6"></div>
+        <div class="mini-body"><h4>Sầu riêng Ri6</h4><span class="price">159.000₫</span></div>
+      </a>
+      <a class="mini-card" href="chitietsanpham.html">
+        <div class="mini-thumb"><img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?q=80&w=400&auto=format&fit=crop" alt="Bơ sáp Đắk Lắk"></div>
+        <div class="mini-body"><h4>Bơ sáp Đắk Lắk</h4><span class="price">55.000₫</span></div>
+      </a>
+      <a class="mini-card" href="chitietsanpham.html">
+        <div class="mini-thumb"><img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?q=80&w=400&auto=format&fit=crop" alt="Măng cụt Lái Thiêu"></div>
+        <div class="mini-body"><h4>Măng cụt Lái Thiêu</h4><span class="price">65.000₫</span></div>
+      </a>
+      <a class="mini-card" href="chitietsanpham.html">
+        <div class="mini-thumb"><img src="https://images.unsplash.com/photo-1546548970-71785318a17b?q=80&w=400&auto=format&fit=crop" alt="Thanh long ruột đỏ"></div>
+        <div class="mini-body"><h4>Thanh long ruột đỏ</h4><span class="price">38.000₫</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="trangchu.html" class="logo"><span class="logo-mark">🍊</span> Vườn Nhà</a>
+      <p>Trái cây tươi từ nhà vườn Việt Nam, hái theo mùa, giao tận nhà mỗi ngày.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Điều hướng</h4>
+      <a href="trangchu.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="sanpham.html">Sản phẩm</a>
+      <a href="lienhe.html">Liên hệ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Tài khoản &amp; Đơn</h4>
+      <a href="dangnhap.html">Đăng nhập</a>
+      <a href="dangky.html">Đăng ký</a>
+      <a href="giohang.html">Giỏ hàng</a>
+      <a href="taikhoan.html">Đơn hàng của tôi</a>
+    </div>
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <li>098 765 4321</li>
+      <li>hello@vuonnha.vn</li>
+      <li>Buôn Ma Thuột, Đắk Lắk</li>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Vườn Nhà. Trái cây sạch mỗi ngày.</span>
+    <span>Thiết kế bởi Vườn Nhà Studio</span>
+  </div>
+</footer>
+
+</body>
+</html>

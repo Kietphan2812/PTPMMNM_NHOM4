@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng ký — Vườn Nhà</title>
+<link rel="stylesheet" href="dangky.css">
+</head>
+<body>
+
+<div class="auth-visual">
+  <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?q=80&w=900&auto=format&fit=crop" alt="Vườn cây ăn trái xanh mát">
+  <a href="trangchu.html" class="logo"><span class="logo-mark">🍊</span> Vườn Nhà</a>
+  <div class="visual-quote">
+    <span class="eyebrow">Gia nhập Vườn Nhà</span>
+    <h2>"Tạo tài khoản để nhận ưu đãi trái mùa, lưu địa chỉ giao hàng và đặt lại đơn chỉ trong một chạm."</h2>
+  </div>
+</div>
+
+<div class="auth-form-wrap">
+  <div class="auth-form">
+    <a href="trangchu.html" class="form-back">← Về trang chủ</a>
+
+    <div class="auth-tabs">
+      <a href="dangnhap.html">Đăng nhập</a>
+      <a href="dangky.html" class="active">Đăng ký</a>
+    </div>
+
+    <h1>Tạo tài khoản mới</h1>
+    <p>Chỉ mất một phút để bắt đầu mua trái cây tươi mỗi ngày cùng Vườn Nhà.</p>
+
+    <form action="taikhoan.html" method="get">
+      <div class="field field-split">
+        <div>
+          <label for="hoten">Họ và tên</label>
+          <input type="text" id="hoten" name="hoten" placeholder="Nguyễn Văn A" required>
+        </div>
+        <div>
+          <label for="sdt">Số điện thoại</label>
+          <input type="tel" id="sdt" name="sdt" placeholder="09xx xxx xxx" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="ban@email.com" required>
+      </div>
+
+      <div class="field field-split">
+        <div>
+          <label for="password">Mật khẩu</label>
+          <input type="password" id="password" name="password" placeholder="Tối thiểu 8 ký tự" required>
+        </div>
+        <div>
+          <label for="confirm">Nhập lại mật khẩu</label>
+          <input type="password" id="confirm" name="confirm" placeholder="Nhập lại mật khẩu" required>
+        </div>
+      </div>
+
+      <label class="terms-row">
+        <input type="checkbox" required checked>
+        <span>Tôi đồng ý với <a href="gioithieu.html">Điều khoản dịch vụ</a> và <a href="gioithieu.html">Chính sách bảo mật</a> của Vườn Nhà.</span>
+      </label>
+
+      <button type="submit" class="btn-primary">Tạo tài khoản</button>
+    </form>
+
+    <div class="divider">Hoặc đăng ký với</div>
+    <div class="social-row">
+      <a href="taikhoan.html" class="social-btn">🔎 Google</a>
+      <a href="taikhoan.html" class="social-btn">📘 Facebook</a>
+    </div>
+
+    <p class="switch-line">Đã có tài khoản? <a href="dangnhap.html">Đăng nhập ngay</a></p>
+  </div>
+</div>
+
+</body>
+</html>
